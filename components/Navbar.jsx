@@ -1,5 +1,20 @@
 import React from "react";
 
+let nav = [
+  {
+    name: "Home",
+    link: "#",
+  },
+  {
+    name: "Features",
+    link: "#",
+  },
+  {
+    name: "Pricing",
+    link: "#",
+  },
+];
+
 const Navbar = () => {
   return (
     <div className="row head">
@@ -23,7 +38,20 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
-                <li className="nav-item">
+                {nav.map((data, index) => {
+                  return (
+                    <li className="nav-item" key={index}>
+                      <a
+                        className="nav-link"
+                        aria-current="page"
+                        href={data.link}
+                      >
+                        {data.name}
+                      </a>
+                    </li>
+                  );
+                })}
+                {/* <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">
                     Home
                   </a>
@@ -37,7 +65,7 @@ const Navbar = () => {
                   <a className="nav-link" href="#">
                     Pricing
                   </a>
-                </li>
+                </li> */}
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
