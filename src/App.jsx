@@ -7,7 +7,7 @@ import TopSideBar from "../components/TopSideBar";
 import BottomSideBar from "../components/BottomSideBar";
 import Features from "../components/Features";
 import Pricing from "../components/Pricing";
-import React from "react";
+// import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
