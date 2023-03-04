@@ -42,8 +42,9 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
-                <BrowserRouter>{li}</BrowserRouter>
-                {/* <li className="nav-item">
+                {/* <BrowserRouter>{li}</BrowserRouter> */}
+                {/* --------------- */}
+                <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">
                     Home
                   </a>
@@ -57,7 +58,7 @@ const Navbar = () => {
                   <a className="nav-link" href="#">
                     Pricing
                   </a>
-                </li> */}
+                </li>
 
                 {/* ------------ */}
                 <li className="nav-item dropdown">

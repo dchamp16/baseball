@@ -19,15 +19,15 @@ function App() {
         </div>
         <div className="row">
           {/* ----------- */}
-          {/* <Content /> */}
-          <BrowserRouter>
+          <Content />
+          {/* <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<Content />} />
               <Route exact path="/features" element={<Features />} />
               <Route exact path="/pricing" element={<Pricing />} />
               <Route exact path="*" element={<h1>404 Error</h1>} />
             </Routes>
-          </BrowserRouter>
+          </BrowserRouter> */}
 
           {/* ----------- */}
           <TopSideBar />
