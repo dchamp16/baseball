@@ -26,7 +26,7 @@ function App() {
             {/* <Pricing /> */}
 
             <Routes>
-              <Route path="/" element={<Content />} />
+              <Route path="/baseball" element={<Content />} />
               <Route path="/features" element={<Features />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="*" element={<h1>404 Error</h1>} />

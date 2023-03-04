@@ -3,7 +3,7 @@ import { BrowserRouter, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   let listName = ["Home", "Features", "Pricing"];
-  let location = ["/", "/features", "/pricing"];
+  let location = ["/baseball", "/features", "/pricing"];
   let li = location.map((value, index) => {
     return (
       <li className="nav-item" key={index}>
