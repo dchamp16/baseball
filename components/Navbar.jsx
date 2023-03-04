@@ -1,18 +1,18 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   let listName = ["Home", "Features", "Pricing"];
   let location = ["/", "/Features", "/Pricing"];
   let li = location.map((value, index) => {
     return (
-      <li className="nav-item" key={`list-${index}`}>
+      <li className="nav-item" key={index}>
         <NavLink
           style={({ isActive }) => {
             return isActive ? { color: "red" } : {};
           }}
           className="nav-link"
+          key={index}
           to={value}
         >
           {listName[index]}
@@ -42,9 +42,8 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
-                {/* <BrowserRouter>{li}</BrowserRouter> */}
-                {/* --------------- */}
-                <li className="nav-item">
+                <BrowserRouter>{li}</BrowserRouter>
+                {/* <li  className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">
                     Home
                   </a>
@@ -58,7 +57,7 @@ const Navbar = () => {
                   <a className="nav-link" href="#">
                     Pricing
                   </a>
-                </li>
+                </li> */}
 
                 {/* ------------ */}
                 <li className="nav-item dropdown">
