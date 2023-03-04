@@ -1,21 +1,24 @@
 import React from "react";
 
-let nav = [
-  {
-    name: "Home",
-    link: "#",
-  },
-  {
-    name: "Features",
-    link: "#",
-  },
-  {
-    name: "Pricing",
-    link: "#",
-  },
-];
-
 const Navbar = () => {
+  let listName = ["Home", "Features", "Pricing"];
+  let location = ["/", "/Features", "/Pricing"];
+  let li = location.map((value, index) => {
+    return (
+      <li className="nav-item">
+        <NavLink
+          style={({ isActive }) => {
+            return isActive ? { color: "red" } : {};
+          }}
+          className="nav-link"
+          key={index}
+          to={value}
+        >
+          {listName[index]}
+        </NavLink>
+      </li>
+    );
+  });
   return (
     <div className="row head">
       <div className="col-sm">
@@ -38,20 +41,8 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
-                {nav.map((data, index) => {
-                  return (
-                    <li className="nav-item" key={index}>
-                      <a
-                        className="nav-link"
-                        aria-current="page"
-                        href={data.link}
-                      >
-                        {data.name}
-                      </a>
-                    </li>
-                  );
-                })}
-                {/* <li className="nav-item">
+                <BrowserRouter>{li}</BrowserRouter>
+                {/* <li  className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">
                     Home
                   </a>
@@ -66,6 +57,8 @@ const Navbar = () => {
                     Pricing
                   </a>
                 </li> */}
+
+                {/* ------------ */}
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
