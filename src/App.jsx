@@ -13,32 +13,36 @@ import Footer from "../components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <div className="container-fluid">
-        <div className="row sticky-top head">
-          <NavBar />
-        </div>
-        <div className="row">
-          {/* ----------- */}
-          <BrowserRouter>
-            <Routes>
-              <Route exact path="/" element={<Content />} />
-              <Route exact path="/features" element={<Features />} />
-              <Route exact path="/pricing" element={<Pricing />} />
-              <Route exact path="*" element={<h1>404 Error</h1>} />
-            </Routes>
-          </BrowserRouter>
+    <BrowserRouter>
+      <div className="App">
+        <div className="container-fluid">
+          <div className="row sticky-top head">
+            <NavBar />
+          </div>
+          <div className="row">
+            {/* ----------- */}
+            {/* <Content /> */}
+            {/* <Features /> */}
+            {/* <Pricing /> */}
 
-          {/* ----------- */}
-          <TopSideBar />
-          <ContentBottom />
-          <BottomSideBar />
-        </div>
-        <div className="row">
-          <Footer />
+            <Routes>
+              <Route path="/" element={<Content />} />
+              <Route path="/features" element={<Features />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="*" element={<h1>404 Error</h1>} />
+            </Routes>
+
+            {/* ----------- */}
+            <TopSideBar />
+            <ContentBottom />
+            <BottomSideBar />
+          </div>
+          <div className="row">
+            <Footer />
+          </div>
         </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
