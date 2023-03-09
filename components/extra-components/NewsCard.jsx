@@ -10,7 +10,7 @@ const NewsCard = () => {
     flexWrap: "wrap",
   };
   return (
-    <div className="test" style={cardPosition}>
+    <div className="py-3" style={cardPosition}>
       <div className="card" style={cardSize}>
         <img
           src="https://images.unsplash.com/photo-1529852978034-f5a227b92f26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
