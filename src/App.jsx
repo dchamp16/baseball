@@ -20,18 +20,12 @@ function App() {
             <NavBar />
           </div>
           <div className="row">
-            {/* ----------- */}
-            {/* <Content /> */}
-            {/* <Features /> */}
-            {/* <Pricing /> */}
-
             <Routes>
               <Route path="/baseball" element={<Content />} />
               <Route path="/features" element={<Features />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="*" element={<h1>404 Error</h1>} />
             </Routes>
-
             {/* ----------- */}
             <TopSideBar />
             <ContentBottom />
