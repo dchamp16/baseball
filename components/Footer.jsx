@@ -126,7 +126,7 @@ const Footer = () => {
           </section>
 
           <div className="text-center p-4">
-            © 2021 Copyright:
+            © {copyrightDate.getFullYear()} Copyright:
             <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
               CHANGE THIS
             </a>

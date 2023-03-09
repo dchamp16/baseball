@@ -2,7 +2,7 @@ import React from "react";
 
 const ScoreTable = () => {
   return (
-    <div className="py-3">
+    <div className="py-4">
       <table className="table table-bordered">
         <thead>
           <tr>
